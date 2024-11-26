@@ -1,0 +1,17 @@
+{% extends "menu.html" %}
+{% load static %}
+
+
+{% block content %}
+    Ваши покупки:
+    <ul>
+{% if len_bas < 1 %}
+        <r><font color="red">{{ content }}</font></r><br>
+    {% else %}
+        {% for i in basket %}
+            <li>{{ i }}</li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+{% endblock %}
+

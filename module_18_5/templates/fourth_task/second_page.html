@@ -1,0 +1,21 @@
+{% extends "menu.html" %}
+{% load static %}
+
+
+{% block pagename %}
+    {{ page_name }}
+{% endblock %}
+
+
+{% block content %}
+    <img src="{% static 'images/backg_kf.jpeg' %}" width="300" height="150">
+    <ul>
+        {% for i in content %}
+            {% if i == 'Killing floor 3' %}
+                <li>{{ i }}<button>Coming soon</button></li>
+            {% else %}
+                <li>{{ i }}<button>Купить</button></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
